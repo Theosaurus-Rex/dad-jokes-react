@@ -16,7 +16,7 @@ class App extends React.Component {
       
     }
     this.onSearchChange = this.onSearchChange.bind(this)
-    this.onSearchSubmit = this.onSearchSubmit.bind(this)
+    this.searchJokes = this.searchJokes.bind(this)
   }
 
   // Search API for a joke
@@ -32,7 +32,6 @@ class App extends React.Component {
       .then(response => response.json())
       .then(json => {
         const jokes = json.results
-        console.log('jokes', jokes)
         this.setState({
           jokes, 
           isFetchingJokes: false
@@ -45,14 +44,10 @@ class App extends React.Component {
   
 
 
-  onSearchChange(event) {
-    this.setState({ searchTerm: event.target.value })
+  onSearchChange(value) {
+    this.setState({ searchTerm: value })
   }
 
-  onSearchSubmit(event) {
-    event.preventDefault()
-    this.searchJokes()
-  }
 
   renderJokes() {
     return (
@@ -66,7 +61,7 @@ class App extends React.Component {
     return (
       <div>
         <SearchForm 
-          onFormSubmit={this.onSearchSubmit} 
+          onFormSubmit={this.searchJokes} 
           onSearchValueChange={this.onSearchChange}
           isSearching={this.state.isFetchingJokes}
           onSingleSearchClick={() => this.searchJokes(1)}
