@@ -59,7 +59,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+
+      <main>
+        <h1 contenteditable className="joogle-logo">
+          <span className="blue-letter">J</span>
+          <span className="red-letter">o</span>
+          <span className="yellow-letter">o</span>
+          <span className="blue-letter">g</span>
+          <span className="green-letter">l</span>
+          <span className="red-letter">e</span>
+        </h1>
+        <h3 className="tagline">The Dad Joke Search Engine</h3>
         <SearchForm 
           onFormSubmit={this.searchJokes} 
           onSearchValueChange={this.onSearchChange}
@@ -72,7 +82,7 @@ class App extends React.Component {
           : this.renderJokes()
         }
         
-      </div>
+      </main>
       
     );
   }

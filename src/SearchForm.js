@@ -1,4 +1,5 @@
 import React from 'react' 
+import './SearchForm.css'
 
 const SearchForm = props => {
   const onSubmit = (event) => {
@@ -6,14 +7,18 @@ const SearchForm = props => {
     props.onFormSubmit()
   }
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className="search-form">
           <input 
             type="text" 
             placeholder="Search for a joke..." 
             onChange={event => props.onSearchValueChange(event.target.value)}
           />
+
+        {/* Search Buttons */}
+        <div>
           <button disabled={props.isSearching}>Search</button>
           <button onClick={props.onSingleSearchClick} disabled={props.isSearching}>I'm Feeling Funny</button>
+        </div>
     </form>
   )
 }
