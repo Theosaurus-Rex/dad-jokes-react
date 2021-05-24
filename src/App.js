@@ -78,7 +78,7 @@ class App extends React.Component {
         />
         
         {this.state.isFetchingJokes
-          ? 'Searching for jokes...'
+          ? <p>Searching for jokes...</p>
           : this.renderJokes()
         }
         

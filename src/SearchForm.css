@@ -15,6 +15,7 @@
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
     transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-bottom: 1rem;
+    width: 60vw;
 }
 
 .search-form input:focus {
@@ -30,4 +31,15 @@ button {
     font-family: arial, sans-serif;
     font-size: 13px;
     font-weight: bold;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+    font-size: 16px;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 2px;
 }

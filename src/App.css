@@ -9,7 +9,8 @@ main {
 
 .joogle-logo {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 60px;
+    font-size: 90px;
+    margin: 30px 0 0 0;
 }
 
 .tagline {
@@ -30,4 +31,13 @@ main {
 
 .green-letter {
     color: rgb(57, 172, 107);
+}
+
+ul {
+    font-family: 'Roboto', sans-serif;
+    line-height: 2;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
 }

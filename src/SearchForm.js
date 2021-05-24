@@ -15,7 +15,7 @@ const SearchForm = props => {
           />
 
         {/* Search Buttons */}
-        <div>
+        <div className="buttons">
           <button disabled={props.isSearching}>Search</button>
           <button onClick={props.onSingleSearchClick} disabled={props.isSearching}>I'm Feeling Funny</button>
         </div>
